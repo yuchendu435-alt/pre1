@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>试一下：div 标签</title>
+  <link rel="stylesheet" href="playground.css">
+</head>
+<body>
+  <header class="toolbar">
+    <div class="heading">
+      <h1>HTML 练习：div 标签</h1>
+      <p>修改左侧代码，然后点击“运行代码”查看效果。</p>
+    </div>
+    <button id="run" type="button">运行代码</button>
+    <button id="reset" class="secondary" type="button">恢复示例</button>
+  </header>
+
+  <main class="workspace">
+    <section class="panel">
+      <h2 class="panel-title">代码</h2>
+      <textarea id="code" spellcheck="false"><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>div 标签</title>
+  <style>
+    .card {
+      width: 260px;
+      padding: 20px;
+      background: #e0f2fe;
+      border: 1px solid #0284c7;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>课程卡片</h2>
+    <p>这里是一组相关内容。</p>
+  </div>
+</body>
+</html></textarea>
+      <div class="tip">快捷键：按 Ctrl + Enter 也可以运行代码。</div>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel-title">运行效果</h2>
+      <iframe id="preview" title="div 示例运行效果" sandbox=""></iframe>
+    </section>
+  </main>
+
+  <script src="playground.js"></script>
+</body>
+</html>

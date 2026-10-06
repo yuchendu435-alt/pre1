@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>试一下：CSS 尺寸计算函数</title>
+  <link rel="stylesheet" href="playground.css">
+</head>
+<body>
+  <header class="toolbar">
+    <div class="heading">
+      <h1>CSS 练习：尺寸计算函数</h1>
+      <p>修改左侧代码，然后点击“运行代码”查看效果。</p>
+    </div>
+    <button id="run" type="button">运行代码</button>
+    <button id="reset" class="secondary" type="button">恢复示例</button>
+  </header>
+
+  <main class="workspace">
+    <section class="panel">
+      <h2 class="panel-title">代码</h2>
+      <textarea id="code" spellcheck="false"><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 尺寸计算函数</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: calc(100vh - 40px);
+      padding: 20px;
+      background: #e2e8f0;
+    }
+
+    .card {
+      width: min(90%, 720px);
+      margin: 0 auto;
+      padding: clamp(16px, 4vw, 48px);
+      background: white;
+      border: 2px solid #2563eb;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 56px);
+    }
+
+    .minimum-width {
+      width: max(240px, 50%);
+      padding: 10px;
+      background: #dbeafe;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>自动调整大小的标题</h1>
+    <p>卡片最大宽度为 720px，窄屏时使用可用宽度的 90%。</p>
+    <div class="minimum-width">这个区域的宽度不会小于 240px。</div>
+  </main>
+</body>
+</html></textarea>
+      <div class="tip">快捷键：按 Ctrl + Enter 也可以运行代码。</div>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel-title">运行效果</h2>
+      <iframe id="preview" title="CSS 尺寸计算函数示例运行效果" sandbox=""></iframe>
+    </section>
+  </main>
+
+  <script src="playground.js"></script>
+</body>
+</html>

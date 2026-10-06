@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 760px;
+  color: #1f2937;
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+  background: #f3f4f6;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 64px;
+  padding: 12px 20px;
+  border-bottom: 1px solid #d1d5db;
+  background: #ffffff;
+}
+
+.heading {
+  margin-right: auto;
+}
+
+.heading h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.heading p {
+  margin: 4px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+button {
+  padding: 9px 16px;
+  border: 0;
+  border-radius: 6px;
+  color: #ffffff;
+  font: inherit;
+  cursor: pointer;
+  background: #16a34a;
+}
+
+button:hover {
+  background: #15803d;
+}
+
+button:focus-visible {
+  outline: 3px solid #86efac;
+  outline-offset: 2px;
+}
+
+.secondary {
+  color: #374151;
+  background: #e5e7eb;
+}
+
+.secondary:hover {
+  background: #d1d5db;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(360px, 1fr) minmax(360px, 1fr);
+  flex: 1;
+  min-height: 0;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+
+.panel + .panel {
+  border-left: 1px solid #d1d5db;
+}
+
+.panel-title {
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+  margin: 0;
+  padding: 0 16px;
+  font-size: 15px;
+  background: #e5e7eb;
+}
+
+#code {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  padding: 18px;
+  border: 0;
+  outline: 0;
+  resize: none;
+  color: #e5e7eb;
+  font: 15px/1.6 Consolas, "Courier New", monospace;
+  tab-size: 2;
+  background: #111827;
+}
+
+#code:focus {
+  box-shadow: inset 0 0 0 2px #60a5fa;
+}
+
+#preview {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  border: 0;
+  background: #ffffff;
+}
+
+.tip {
+  padding: 8px 16px;
+  color: #4b5563;
+  font-size: 13px;
+  background: #f9fafb;
+}

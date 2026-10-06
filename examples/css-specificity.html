@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>试一下：CSS 优先级</title>
+  <link rel="stylesheet" href="playground.css">
+</head>
+<body>
+  <header class="toolbar">
+    <div class="heading">
+      <h1>CSS 练习：选择器优先级</h1>
+      <p>修改左侧代码，然后点击“运行代码”查看效果。</p>
+    </div>
+    <button id="run" type="button">运行代码</button>
+    <button id="reset" class="secondary" type="button">恢复示例</button>
+  </header>
+
+  <main class="workspace">
+    <section class="panel">
+      <h2 class="panel-title">代码</h2>
+      <textarea id="code" spellcheck="false"><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS 优先级</title>
+  <style>
+    p {
+      color: blue;
+    }
+
+    .message {
+      color: green;
+    }
+
+    #notice {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <p id="notice" class="message">
+    最终是红色，因为 ID 选择器优先级更高。
+  </p>
+</body>
+</html></textarea>
+      <div class="tip">快捷键：按 Ctrl + Enter 也可以运行代码。</div>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel-title">运行效果</h2>
+      <iframe id="preview" title="CSS 优先级示例运行效果" sandbox=""></iframe>
+    </section>
+  </main>
+
+  <script src="playground.js"></script>
+</body>
+</html>

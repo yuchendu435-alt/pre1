@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>试一下：Grid 网格布局</title>
+  <link rel="stylesheet" href="playground.css">
+</head>
+<body>
+  <header class="toolbar">
+    <div class="heading">
+      <h1>CSS 练习：Grid 网格布局</h1>
+      <p>修改左侧代码，然后点击“运行代码”查看效果。</p>
+    </div>
+    <button id="run" type="button">运行代码</button>
+    <button id="reset" class="secondary" type="button">恢复示例</button>
+  </header>
+
+  <main class="workspace">
+    <section class="panel">
+      <h2 class="panel-title">代码</h2>
+      <textarea id="code" spellcheck="false"><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid 跨行跨列</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 120px);
+      gap: 12px;
+    }
+
+    .item {
+      display: grid;
+      place-items: center;
+      color: white;
+      background: #2563eb;
+    }
+
+    .wide {
+      grid-column: 1 / 3;
+      background: #7c3aed;
+    }
+
+    .tall {
+      grid-column: 3 / 4;
+      grid-row: 1 / 3;
+      background: #ea580c;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="item wide">跨两列</div>
+    <div class="item tall">跨两行</div>
+    <div class="item">普通项目</div>
+    <div class="item">普通项目</div>
+  </div>
+</body>
+</html></textarea>
+      <div class="tip">快捷键：按 Ctrl + Enter 也可以运行代码。</div>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel-title">运行效果</h2>
+      <iframe id="preview" title="Grid 网格布局示例运行效果" sandbox=""></iframe>
+    </section>
+  </main>
+
+  <script src="playground.js"></script>
+</body>
+</html>

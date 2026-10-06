@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>试一下：分组选择器</title>
+  <link rel="stylesheet" href="../playground.css">
+</head>
+<body>
+  <header class="toolbar">
+    <div class="heading">
+      <h1>CSS 选择器练习：分组选择器</h1>
+      <p>修改左侧代码，然后点击“运行代码”查看效果。</p>
+    </div>
+    <button id="run" type="button">运行代码</button>
+    <button id="reset" class="secondary" type="button">恢复示例</button>
+  </header>
+
+  <main class="workspace">
+    <section class="panel">
+      <h2 class="panel-title">代码</h2>
+      <textarea id="code" spellcheck="false"><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>分组选择器</title>
+  <style>
+    h1,
+    h2,
+    .note {
+      color: #7c3aed;
+    }
+  </style>
+</head>
+<body>
+  <h1>一级标题</h1>
+  <h2>二级标题</h2>
+  <p class="note">带有 note 类的段落。</p>
+  <p>普通段落不会变成紫色。</p>
+</body>
+</html></textarea>
+      <div class="tip">快捷键：按 Ctrl + Enter 也可以运行代码。</div>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel-title">运行效果</h2>
+      <iframe id="preview" title="分组选择器运行效果" sandbox=""></iframe>
+    </section>
+  </main>
+
+  <script src="../playground.js"></script>
+</body>
+</html>

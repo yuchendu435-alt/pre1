@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>试一下：Flex 弹性布局</title>
+  <link rel="stylesheet" href="playground.css">
+</head>
+<body>
+  <header class="toolbar">
+    <div class="heading">
+      <h1>CSS 练习：Flex 弹性布局</h1>
+      <p>修改左侧代码，然后点击“运行代码”查看效果。</p>
+    </div>
+    <button id="run" type="button">运行代码</button>
+    <button id="reset" class="secondary" type="button">恢复示例</button>
+  </header>
+
+  <main class="workspace">
+    <section class="panel">
+      <h2 class="panel-title">代码</h2>
+      <textarea id="code" spellcheck="false"><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex 子元素属性</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    .container {
+      min-height: 240px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      padding: 16px;
+      background: #e2e8f0;
+    }
+
+    .item {
+      flex: 1 1 180px;
+      padding: 24px;
+      color: white;
+      text-align: center;
+      background: #2563eb;
+    }
+
+    .important {
+      flex-grow: 2;
+      align-self: stretch;
+      background: #7c3aed;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">普通项目</div>
+    <div class="item important">占用更多剩余空间，并单独拉伸</div>
+    <div class="item">普通项目</div>
+  </div>
+</body>
+</html></textarea>
+      <div class="tip">快捷键：按 Ctrl + Enter 也可以运行代码。</div>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel-title">运行效果</h2>
+      <iframe id="preview" title="Flex 弹性布局示例运行效果" sandbox=""></iframe>
+    </section>
+  </main>
+
+  <script src="playground.js"></script>
+</body>
+</html>

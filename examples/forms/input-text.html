@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>试一下：文本输入框</title>
+  <link rel="stylesheet" href="../playground.css">
+</head>
+<body>
+  <header class="toolbar">
+    <div class="heading">
+      <h1>HTML 表单练习：文本输入框</h1>
+      <p>修改左侧代码，然后点击“运行代码”查看效果。</p>
+    </div>
+    <button id="run" type="button">运行代码</button>
+    <button id="reset" class="secondary" type="button">恢复示例</button>
+  </header>
+
+  <main class="workspace">
+    <section class="panel">
+      <h2 class="panel-title">代码</h2>
+      <textarea id="code" spellcheck="false"><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>文本输入框</title>
+  <style>
+    label { display: block; margin-bottom: 8px; }
+    input { width: 260px; padding: 8px; }
+  </style>
+</head>
+<body>
+  <label for="nickname">昵称</label>
+  <input
+    id="nickname"
+    name="nickname"
+    type="text"
+    placeholder="请输入昵称"
+    maxlength="12"
+    autocomplete="name"
+  >
+</body>
+</html></textarea>
+      <div class="tip">快捷键：按 Ctrl + Enter 也可以运行代码。</div>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel-title">运行效果</h2>
+      <iframe id="preview" title="文本输入框运行效果" sandbox="allow-forms"></iframe>
+    </section>
+  </main>
+
+  <script src="../playground.js"></script>
+</body>
+</html>
