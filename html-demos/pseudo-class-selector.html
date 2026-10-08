@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>伪类选择器演示</title>
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <main class="workspace">
+    <section class="panel">
+      <header class="panel-head"><span>源代码</span><span>HTML + CSS</span></header>
+      <div class="source-wrap"><ol class="source-code" id="source-code"></ol></div>
+    </section>
+    <section class="panel">
+      <header class="panel-head"><span>运行结果</span><a href="common-tags.html">返回目录</a></header>
+      <iframe class="result-frame" id="result-frame" title="伪类选择器运行结果"></iframe>
+    </section>
+  </main>
+
+  <script type="text/plain" id="demo-source"><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>伪类选择器</title>
+  <style>
+    /* 1. 未访问过的链接 */
+    a:link {
+      color: blue;
+    }
+
+    /* 2. 已经访问过的链接 */
+    a:visited {
+      color: purple;
+    }
+
+    /* 3. 鼠标悬停在链接上 */
+    a:hover {
+      color: red;
+    }
+
+    /* 4. 鼠标按下的瞬间 */
+    a:active {
+      color: orange;
+    }
+
+    /* 5. 输入框获得焦点 */
+    input:focus {
+      border: 2px solid blue;
+      outline: none;
+    }
+
+    /* 6. 选择第一个子元素 */
+    li:first-child {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h3>链接伪类</h3>
+  <a href="https://www.baidu.com" target="_blank">百度</a>
+
+  <h3>focus 示例</h3>
+  <input type="text" placeholder="点击这里输入">
+
+  <h3>first-child 示例</h3>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+</body>
+</html></script>
+  <script src="demo.js"></script>
+</body>
+</html>

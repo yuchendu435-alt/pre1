@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>组合选择器演示</title>
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <main class="workspace">
+    <section class="panel">
+      <header class="panel-head"><span>源代码</span><span>HTML + CSS</span></header>
+      <div class="source-wrap"><ol class="source-code" id="source-code"></ol></div>
+    </section>
+    <section class="panel">
+      <header class="panel-head"><span>运行结果</span><a href="common-tags.html">返回目录</a></header>
+      <iframe class="result-frame" id="result-frame" title="组合选择器运行结果"></iframe>
+    </section>
+  </main>
+
+  <script type="text/plain" id="demo-source"><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>组合选择器</title>
+  <style>
+    /* 后代选择器：选中 .box 里面所有的 p */
+    .box p {
+      color: red;
+    }
+
+    /* 子代选择器：选中 .box 的直接子元素 p
+    .box > p {
+      color: blue;
+    }
+    */
+
+    /* 相邻兄弟选择器：选中 h2 后面紧邻的第一个 p
+    h2 + p {
+      color: green;
+    }
+    */
+
+    /* 通用兄弟选择器：选中 h2 后面所有同级的 p
+    h2 ~ p {
+      color: orange;
+    }
+    */
+  </style>
+</head>
+<body>
+  <div class="box">
+    <p>第一个 p</p>
+
+    <div>
+      <p>第二个 p</p>
+    </div>
+
+    <h2>标题</h2>
+    <p>第三个 p</p>
+    <p>第四个 p</p>
+  </div>
+</body>
+</html></script>
+  <script src="demo.js"></script>
+</body>
+</html>

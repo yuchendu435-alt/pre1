@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>id 和 class 选择器演示</title>
+  <link rel="stylesheet" href="demo.css">
+</head>
+
+<body>
+  <main class="workspace">
+    <section class="panel">
+      <header class="panel-head"><span>源代码</span><span>HTML + CSS</span></header>
+      <div class="source-wrap">
+        <ol class="source-code" id="source-code"></ol>
+      </div>
+    </section>
+    <section class="panel">
+      <header class="panel-head"><span>运行结果</span><a href="common-tags.html">返回目录</a></header>
+      <iframe class="result-frame" id="result-frame" title="id 和 class 选择器运行结果"></iframe>
+    </section>
+  </main>
+
+  <script type="text/plain" id="demo-source"><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>id 和 class 选择器</title>
+  <style>
+    /* class 选择器：前面加 . */
+    .title {
+      color: blue;
+      font-size: 24px;
+    }
+
+    /* id 选择器：前面加 # */
+    #main-title {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="main-title" class="title">这是主标题</h1>
+  <h2 class="title">这是副标题</h2>
+  <p class="title">这是一段文字</p>
+</body>
+</html></script>
+  <script src="demo.js"></script>
+</body>
+
+</html>

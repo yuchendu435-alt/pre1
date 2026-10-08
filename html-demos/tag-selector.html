@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>标签选择器演示</title>
+  <link rel="stylesheet" href="demo.css">
+</head>
+
+<body>
+  <main class="workspace">
+    <section class="panel">
+      <header class="panel-head"><span>源代码</span><span>HTML + CSS</span></header>
+      <div class="source-wrap">
+        <ol class="source-code" id="source-code"></ol>
+      </div>
+    </section>
+    <section class="panel">
+      <header class="panel-head"><span>运行结果</span><a href="common-tags.html">返回目录</a></header>
+      <iframe class="result-frame" id="result-frame" title="标签选择器运行结果"></iframe>
+    </section>
+  </main>
+
+  <script type="text/plain" id="demo-source"><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>标签选择器</title>
+  <style>
+    p {
+      color: red;
+      font-size: 20px;
+    }
+
+    h1 {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>这是标题</h1>
+  <p>这是第一段文字</p>
+  <p>这是第二段文字</p>
+</body>
+</html></script>
+  <script src="demo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>伪元素选择器演示</title>
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <main class="workspace">
+    <section class="panel">
+      <header class="panel-head"><span>源代码</span><span>HTML + CSS</span></header>
+      <div class="source-wrap"><ol class="source-code" id="source-code"></ol></div>
+    </section>
+    <section class="panel">
+      <header class="panel-head"><span>运行结果</span><a href="common-tags.html">返回目录</a></header>
+      <iframe class="result-frame" id="result-frame" title="伪元素选择器运行结果"></iframe>
+    </section>
+  </main>
+
+  <script type="text/plain" id="demo-source"><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>伪元素选择器</title>
+  <style>
+    /* 在标题前面添加内容 */
+    .title::before {
+      content: "★ ";
+      color: red;
+    }
+
+    /* 在标题后面添加内容 */
+    .title::after {
+      content: " NEW";
+      color: orange;
+    }
+
+    /* 设置段落的第一个字符 */
+    .text::first-letter {
+      color: red;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2 class="title">HTML 与 CSS</h2>
+
+  <p class="text">
+    Hello CSS！这是一段用来演示伪元素选择器的文字。
+    伪元素可以选择元素的一部分，也可以在元素前后添加内容。
+  </p>
+</body>
+</html></script>
+  <script src="demo.js"></script>
+</body>
+</html>
